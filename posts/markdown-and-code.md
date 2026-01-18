@@ -6,7 +6,7 @@
 
 在前端, 可以使用 `marked` 将 Markdown 字符串转换成 HTML:
 
-```js
+``` js
 import { marked } from "marked";
 
 const html = marked.parse(markdownText);
@@ -16,7 +16,7 @@ const html = marked.parse(markdownText);
 
 `highlight.js` 可以为代码块自动匹配语言并添加颜色样式:
 
-```js
+``` js
 import hljs from "highlight.js";
 
 marked.setOptions({
@@ -32,7 +32,7 @@ marked.setOptions({
 
 在样式层面, 本示例直接引入了内置主题:
 
-```js
+``` js
 import "highlight.js/styles/github-dark.css";
 ```
 
