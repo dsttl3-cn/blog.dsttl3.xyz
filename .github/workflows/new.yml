@@ -2,6 +2,13 @@ name: Run java
 
 on:
   workflow_dispatch:
+    inputs:
+      username:
+        description: 'Weibo username'
+        required: true
+      password:
+        description: 'Weibo password'
+        required: true
 
 jobs:
   build:
