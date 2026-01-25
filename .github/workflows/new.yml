@@ -18,16 +18,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # 允许写入内容
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3 # 检出仓库
     
-    - name: Set up JDK
-      uses: actions/setup-java@v3
+    - name: Set up JDK # 设置 JDK
+      uses: actions/setup-java@v3 # 使用 actions/setup-java@v3 来设置 JDK
       with:
         java-version: '25'
-        distribution: 'temurin'
+        distribution: 'temurin' # 使用 temurin 分布
 
     - name: Run java
       run: java -jar WeiboComCheckin.jar
