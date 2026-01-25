@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// 读取posts目录下的所有Markdown文件
-const postsDir = path.join(__dirname, 'posts');
+// 读取Markdown目录下的所有Markdown文件
+const postsDir = path.join(__dirname, 'Markdown');
 const files = fs.readdirSync(postsDir).filter(file => file.endsWith('.md'));
 
 const posts = [];
