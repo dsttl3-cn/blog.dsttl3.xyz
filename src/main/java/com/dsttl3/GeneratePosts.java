@@ -19,9 +19,9 @@ public class GeneratePosts {
             // 读取Markdown目录下的所有Markdown文件
             Path postsDir = Paths.get(System.getProperty("user.dir"), "Markdown");
             List<Path> markdownFiles = new ArrayList<>();
-            
             try (DirectoryStream<Path> stream = Files.newDirectoryStream(postsDir, "*.md")) {
                 for (Path entry : stream) {
+                    System.out.println(entry.getFileName());
                     markdownFiles.add(entry);
                 }
             }
