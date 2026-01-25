@@ -22,7 +22,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Run java
-      run: java -jar WeiboComCheckin-1.0-SNAPSHOT.jar
+      run: java -jar WeiboComCheckin.jar
     
     - name: Commit and push changes
       run: |
