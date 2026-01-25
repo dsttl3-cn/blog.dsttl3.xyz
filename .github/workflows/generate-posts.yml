@@ -1,0 +1,30 @@
+name: Generate Posts JSON
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    
+    - name: Generate posts.json
+      run: node generate-posts.js
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add api/posts.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update posts.json"
+        git push
