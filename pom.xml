@@ -32,7 +32,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>GeneratePosts</mainClass>
+                            <mainClass>com.dsttl3.GeneratePosts</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

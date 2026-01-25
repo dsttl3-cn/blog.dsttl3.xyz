@@ -25,7 +25,7 @@ jobs:
       run: mvn compile
     
     - name: Generate posts.json
-      run: mvn exec:java -Dexec.mainClass="GeneratePosts"
+      run: mvn exec:java -Dexec.mainClass="com.dsttl3.GeneratePosts"
     
     - name: Commit and push changes
       run: |
