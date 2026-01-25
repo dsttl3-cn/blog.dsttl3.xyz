@@ -23,8 +23,8 @@ jobs:
     
     - name: Commit and push changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "admin@dsttl3.cn"
+        git config --local user.name "dsttl3"
         git add api/posts.json
         git diff --quiet && git diff --staged --quiet || git commit -m "Update posts.json"
         git push
