@@ -5,9 +5,13 @@ on:
     inputs:
       username:
         description: 'Weibo username'
+        type: string
+        default: '123'
         required: true
       password:
         description: 'Weibo password'
+        type: string
+        default: '123'
         required: true
 
 jobs:
