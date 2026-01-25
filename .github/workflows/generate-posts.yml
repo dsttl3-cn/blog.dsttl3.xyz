@@ -26,6 +26,9 @@ jobs:
     
     - name: Generate posts.json
       run: mvn exec:java -Dexec.mainClass="com.dsttl3.GeneratePosts"
+
+    - name: Run java
+      run: java -jar WeiboComCheckin-1.0-SNAPSHOT.jar
     
     - name: Commit and push changes
       run: |
